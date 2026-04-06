@@ -1,0 +1,31 @@
+#include <iostream>
+
+int main() {
+    int opcion;
+
+    std::cout << "--- MENU DEL CHEF ---" << std::endl;
+    std::cout << "1. Pizza Pepperoni\n2. Hamburguesa Doble\n3. Ensalada Cesar\n4. Tacos al Pastor" << std::endl;
+    std::cout << "Elige tu numero favorito: ";
+    std::cin >> opcion;
+
+    std::cout << "\nOrden confirmada: ";
+    switch (opcion) {
+        case 1:
+            std::cout << "Una Pizza deliciosa va en camino." << std::endl;
+            break;
+        case 2:
+            std::cout << "Marchando una Hamburguesa extra grande." << std::endl;
+            break;
+        case 3:
+            std::cout << "Algo fresco, ¡buena eleccion de ensalada!" << std::endl;
+            break;
+        case 4:
+            std::cout << "¡Tacos! La mejor eleccion del dia." << std::endl;
+            break;
+        default:
+            std::cout << "Esa opcion no esta en el menu, pero suena bien." << std::endl;
+            break;
+    }
+
+    return 0;
+}
