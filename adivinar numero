@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cstdlib> // Para rand() y srand()
+#include <ctime>   // Para time()
+
+int main() {
+    srand(time(0)); // "Siembra" una semilla diferente cada vez para el azar
+    int numeroSecreto = rand() % 20 + 1; // Número aleatorio entre 1 y 20
+    int intento;
+
+    std::cout << "¡He pensado un numero entre 1 y 20! Intenta adivinarlo." << std::endl;
+
+    do {
+        std::cout << "Tu apuesta: ";
+        std::cin >> intento;
+
+        if (intento < numeroSecreto) {
+            std::cout << "Más alto..." << std::endl;
+        } else if (intento > numeroSecreto) {
+            std::cout << "Más bajo..." << std::endl;
+        }
+    } while (intento != numeroSecreto);
+
+    std::cout << "¡Felicidades! Lo lograste." << std::endl;
+    return 0;
+}
